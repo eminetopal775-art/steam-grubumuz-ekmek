@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrupt Community | Pixel Gun 3D & Steam Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pixelBlue: '#00c3ff',
+                        pixelOrange: '#ff8800',
+                        pixelPurple: '#8a2be2',
+                        pixelDark: '#0b0e14',
+                        pixelCard: '#151a24'
+                    },
+                    fontFamily: {
+                        pixel: ['"Press Start 2P"', 'cursive'],
+                        rajdhani: ['Rajdhani', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0b0e14;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(0, 195, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(255, 136, 0, 0.08) 0%, transparent 40%),
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90px, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+        }
+
+        .glass-panel {
+            background: rgba(21, 26, 36, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(0, 195, 255, 0.35);
+        }
+
+        .glow-orange {
+            box-shadow: 0 0 20px rgba(255, 136, 0, 0.35);
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(0, 195, 255, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(0, 195, 255, 0.8); }
+        }
+
+        .pulse-btn {
+            animation: pulseGlow 2.5s infinite;
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen flex flex-col justify-between selection:bg-pixelBlue selection:text-black">
+
+    <!-- Header -->
+    <header class="w-full glass-panel border-b border-gray-800 sticky top-0 z-50 px-4 py-3">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pixelBlue to-pixelPurple flex items-center justify-center font-pixel text-lg font-bold text-white shadow-lg">
+                    PG
+                </div>
+                <div>
+                    <h1 class="font-pixel text-xs sm:text-sm text-pixelBlue tracking-wider">CORRUPT COMMUNITY</h1>
+                    <p class="text-xs text-gray-400">Official Steam & Pixel Gun Hub</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="https://steamcommunity.com/chat/invite/j3lVVFSM" target="_blank" class="px-3 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm rounded-lg transition flex items-center gap-2">
+                    <i class="fa-solid fa-comments"></i>
+                    <span class="hidden sm:inline">Steam Sohbeti</span>
+                </a>
+                <a href="#trade" class="px-4 py-2 bg-gradient-to-r from-pixelOrange to-amber-500 hover:from-amber-500 hover:to-pixelOrange text-black font-bold text-xs sm:text-sm rounded-lg transition transform hover:scale-105 flex items-center gap-2">
+                    <i class="fa-brands fa-steam text-lg"></i>
+                    <span>Takas Yap</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full space-y-10">
+
+        <!-- Hero Section -->
+        <section class="text-center py-10 relative overflow-hidden rounded-2xl glass-panel border border-gray-800 px-4">
+            <div class="absolute inset-0 bg-gradient-to-r from-pixelBlue/10 via-transparent to-pixelOrange/10 pointer-events-none"></div>
+            <span class="inline-block px-3 py-1 bg-pixelBlue/10 border border-pixelBlue/30 text-pixelBlue rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+                ✨ Resmi Topluluk Sayfası
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 font-rajdhani uppercase">
+                Grubumuza <span class="text-transparent bg-clip-text bg-gradient-to-r from-pixelBlue via-cyan-300 to-pixelOrange">Hoş Geldiniz!</span>
+            </h2>
+            <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
+                Pixel Gun 3D oyuncuları ve Steam takas severler için oluşturulmuş topluluğumuza katıldığınız için teşekkür ederiz. Grubumuza katılıp bizimle sohbet edebilir veya takas yapabilirsiniz!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://steamcommunity.com/chat/invite/j3lVVFSM" target="_blank" class="px-6 py-3 bg-pixelBlue hover:bg-cyan-400 text-black font-extrabold rounded-lg transition-all duration-200 flex items-center gap-2 pulse-btn">
+                    <i class="fa-solid fa-comments text-lg"></i> Steam Sohbet Grubuna Katıl
+                </a>
+                <a href="#trade" class="px-6 py-3 glass-panel hover:bg-gray-800 text-white font-bold rounded-lg transition-all duration-200 border border-gray-700 flex items-center gap-2">
+                    <i class="fa-brands fa-steam text-pixelOrange text-lg"></i> Takas Teklifi Gönder
+                </a>
+            </div>
+        </section>
+
+        <!-- Steam Chat Invite Banner -->
+        <section class="glass-panel rounded-2xl p-6 border border-blue-500/30 glow-blue relative overflow-hidden">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4 text-center md:text-left">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-pixelBlue text-3xl shrink-0 mx-auto md:mx-0">
+                        <i class="fa-solid fa-users font-bold"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Steam Grup Sohbetimize Katılın</h3>
+                        <p class="text-sm text-gray-300">Maçlar organize edin, takas fikirleri paylaşın ve toplulukla iletişimde kalın.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto flex flex-col sm:flex-row gap-2">
+                    <a href="https://steamcommunity.com/chat/invite/j3lVVFSM" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition text-center flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Gruba Katıl
+                    </a>
+                    <button onclick="copyToClipboard('https://steamcommunity.com/chat/invite/j3lVVFSM', 'Davet Linki Kopyalandı!')" class="px-4 py-3 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl border border-gray-700 transition flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-copy"></i>
+                        <span class="text-sm font-bold">Daveti Kopyala</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile & Stats Grid -->
+        <section id="profile" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Profile Info Box -->
+            <div class="lg:col-span-5 glass-panel rounded-2xl p-6 border border-gray-800 flex flex-col justify-between relative overflow-hidden">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 rounded-xl bg-gradient-to-tr from-yellow-500 to-pixelOrange p-1 shadow-lg">
+                                    <div class="w-full h-full bg-pixelDark rounded-lg flex items-center justify-center font-pixel text-xl text-yellow-400">
+                                        😀
+                                    </div>
+                                </div>
+                                <span class="absolute -bottom-2 -right-2 bg-yellow-500 text-black font-black text-xs px-2 py-0.5 rounded-full border border-black shadow">
+                                    Lv.24
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                                    ekmek ad...
+                                    <i class="fa-solid fa-circle-check text-pixelBlue text-sm" title="Doğrulanmış"></i>
+                                </h3>
+                                <p class="text-xs text-pixelOrange font-semibold tracking-wider uppercase">★ CORRUPT Clan Member</p>
+                                <p class="text-xs text-gray-400 mt-1">Sınıf: <span class="text-gray-200">Acemi</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ID Copy Block -->
+                    <div class="bg-pixelDark/80 rounded-xl p-3 border border-gray-800 flex items-center justify-between mb-6">
+                        <div>
+                            <p class="text-xs text-gray-400">Oyuncu ID (Pixel Gun 3D)</p>
+                            <p class="font-mono text-lg font-bold text-pixelBlue tracking-wider">346016673</p>
+                        </div>
+                        <button onclick="copyToClipboard('346016673', 'Oyuncu ID Kopyalandı!')" class="px-3 py-2 bg-gray-800 hover:bg-pixelBlue hover:text-black text-gray-300 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Kopyala</span>
+                        </button>
+                    </div>
+
+                    <!-- Equipped Gear Loadout -->
+                    <div>
+                        <h4 class="text-xs uppercase font-bold text-gray-400 tracking-wider mb-3">Donatı Ekipmanı (Favori Set)</h4>
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="bg-gray-900/80 p-2 rounded-lg border border-gray-800 text-center hover:border-pixelBlue transition">
+                                <i class="fa-solid fa-gun text-pixelBlue text-xl mb-1"></i>
+                                <p class="text-[10px] text-gray-400 truncate">Çift Tabanca</p>
+                            </div>
+                            <div class="bg-gray-900/80 p-2 rounded-lg border border-gray-800 text-center hover:border-pixelBlue transition">
+                                <i class="fa-solid fa-crosshairs text-pixelOrange text-xl mb-1"></i>
+                                <p class="text-[10px] text-gray-400 truncate">Ağır Tüfek</p>
+                            </div>
+                            <div class="bg-gray-900/80 p-2 rounded-lg border border-gray-800 text-center hover:border-pixelBlue transition">
+                                <i class="fa-solid fa-bolt text-yellow-400 text-xl mb-1"></i>
+                                <p class="text-[10px] text-gray-400 truncate">Enerji Silahı</p>
+                            </div>
+                            <div class="bg-gray-900/80 p-2 rounded-lg border border-gray-800 text-center hover:border-pixelBlue transition">
+                                <i class="fa-solid fa-jet-fighter text-pixelPurple text-xl mb-1"></i>
+                                <p class="text-[10px] text-gray-400 truncate">Jetpack</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-800/80 text-xs text-gray-400 flex justify-between items-center">
+                    <span>Durum: <span class="text-green-400 font-bold">● Aktif Oyuncu</span></span>
+                    <span>30 Günlük Veriler</span>
+                </div>
+            </div>
+
+            <!-- Stats Grid Box -->
+            <div class="lg:col-span-7 glass-panel rounded-2xl p-6 border border-gray-800">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-pixelBlue"></i>
+                        30 Günün İstatistikleri
+                    </h3>
+                    <span class="text-xs text-gray-400 bg-gray-800 px-2.5 py-1 rounded-full">Otomatik Güncellendi</span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-skull text-red-400"></i>
+                            <span>Öldürmeler</span>
+                        </div>
+                        <p class="text-2xl font-bold text-white font-mono">3,598</p>
+                    </div>
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-bullseye text-pixelBlue"></i>
+                            <span>İsabetlilik</span>
+                        </div>
+                        <p class="text-2xl font-bold text-pixelBlue font-mono">%55.4</p>
+                    </div>
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-bolt-lightning text-yellow-400"></i>
+                            <span>Öldürme Hızı</span>
+                        </div>
+                        <p class="text-2xl font-bold text-yellow-400 font-mono">2.0</p>
+                    </div>
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-gamepad text-pixelPurple"></i>
+                            <span>Maçlar</span>
+                        </div>
+                        <p class="text-2xl font-bold text-white font-mono">213</p>
+                    </div>
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-crosshairs text-orange-400"></i>
+                            <span>Kafadan Vurma</span>
+                        </div>
+                        <p class="text-2xl font-bold text-orange-400 font-mono">816</p>
+                    </div>
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-trophy text-yellow-500"></i>
+                            <span>Zaferler</span>
+                        </div>
+                        <p class="text-2xl font-bold text-yellow-500 font-mono">112</p>
+                    </div>
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-fire text-red-500"></i>
+                            <span>Öldürme Serisi</span>
+                        </div>
+                        <p class="text-2xl font-bold text-red-400 font-mono">20</p>
+                    </div>
+                    <div class="bg-pixelDark/60 p-4 rounded-xl border border-gray-800/80 hover:border-pixelBlue/50 transition">
+                        <div class="flex items-center gap-2 text-gray-400 text-xs mb-1">
+                            <i class="fa-solid fa-award text-emerald-400"></i>
+                            <span>Zafer Serisi</span>
+                        </div>
+                        <p class="text-2xl font-bold text-emerald-400 font-mono">11</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trade Section -->
+        <section id="trade" class="glass-panel rounded-2xl p-6 sm:p-8 border border-pixelOrange/30 relative overflow-hidden glow-orange">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-3 text-center md:text-left">
+                    <span class="px-3 py-1 bg-pixelOrange/20 border border-pixelOrange/40 text-pixelOrange rounded-full text-xs font-bold tracking-wider uppercase inline-block">
+                        <i class="fa-brands fa-steam"></i> Steam Takas Merkezi
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                        Hemen Takas Teklifi Gönderin
+                    </h3>
+                    <p class="text-gray-300 text-sm max-w-xl">
+                        Koleksiyonumuzdaki Steam veya TF2 takas eşyaları için doğrudan teklifinizi iletebilirsiniz. Adil takaslar her zaman kabul edilir!
+                    </p>
+                </div>
+
+                <div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+                    <a href="https://steamcommunity.com/tradeoffer/new/?partner=1864848409&token=jBr8e16A" target="_blank" class="px-6 py-4 bg-gradient-to-r from-pixelOrange to-amber-500 hover:from-amber-500 hover:to-pixelOrange text-black font-extrabold text-center rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fa-brands fa-steam text-xl"></i>
+                        Takas Teklifi Gönder
+                    </a>
+                    <button onclick="copyToClipboard('https://steamcommunity.com/tradeoffer/new/?partner=1864848409&token=jBr8e16A', 'Steam Takas Linki Kopyalandı!')" class="px-4 py-4 bg-gray-800 hover:bg-gray-700 text-white rounded-xl border border-gray-700 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-link"></i>
+                        <span class="text-sm font-bold">Link'i Kopyala</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-pixelBlue text-black px-5 py-3 rounded-xl shadow-2xl font-bold text-sm transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span id="toast-message">Kopyalandı!</span>
+    </div>
+
+    <footer class="w-full border-t border-gray-800/80 py-6 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p>© 2026 Corrupt Community. Tüm hakları saklıdır.</p>
+            <p>Pixel Gun 3D & Steam fan topluluğu için özel oluşturulmuştur.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(text, message) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            showToast(message || 'Kopyalandı!');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            
+            toastMsg.innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
